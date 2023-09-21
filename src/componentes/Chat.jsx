@@ -1,27 +1,26 @@
-//ESTE CHAT ESTA INTEGRADO CON LA API DE CHATGPT, DEBIDO A QUE LA KEY DE LA API NO ME ANDA DECIDI DEJARLA CREADA PERO NO MS0TRARLA EN EL FRONT,
+//ESTE CHAT ESTA INTEGRADO CON LA API DE CHATGPT, DEBIDO A QUE LA KEY DE LA API NO ME ANDA DECIDI DEJARLA CREADA PERO NO MOSTRARLA EN EL FRONT,
 // EN CAMBIO DEJE UN DISEÑO DE CHATBOT DONDE EL USUARIO ENVIA MENSAJES, PERO QUERIA DEJAR ESTE CHAT PARACUMPLIR CON LOS REQUISITOS DE FUNCIONALIDAD  
-
-
-
-
 
 import React, { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Button } from 'bootstrap';
-import Configuration from 'openai'
-import { Row, Col, Form, Spinner} from 'react-bootstrap'
+import Configuration, { OpenAI } from 'openai';
+import { Row, Col, Form, Spinner} from 'react-bootstrap';
 import OpenAIApi from 'openai';
 
 
+ 
 const PARAMS ={
     temperature: 0.5,
     max_tokens: 256
 }
 
+
+
 const configuration = new Configuration({
     organization: "org-Uyq1NgghoD9HIyaYRxtSdkLT",
-    apiKey: process.env.OPENAI_KEY,
+    apiKey : process.env.REACT_APP_OPENAI_API_KEY
 });
 const openai = new OpenAIApi(configuration);
 const response = await openai.listEngines();
@@ -33,6 +32,8 @@ const Chat = () => {
     const [cbResponse, setCbResponse] = useState('')
     const [userInput, setUserInput] = useState('')
     const [isLoading, setIsLoading] = useState(false)
+    
+
 
     const getInstructions =(qt, input) => {
         let prompt;
