@@ -1,0 +1,49 @@
+/* Estilos para el contenedor principal */
+.chat-container {
+    margin-top: 20px; /* Espacio superior opcional */
+    display: flex;
+    
+  }
+  
+  /* Estilos para la columna de la imagen */
+  .image-container {
+    padding: 20px; /* Espacio alrededor de la imagen */
+    background-color: #f0f0f0; /* Color de fondo opcional */
+    display: flex;
+  }
+  
+  /* Estilos para la columna del chat */
+  .chat-box {
+    padding: 20px; /* Espacio alrededor del chat */
+  }
+  
+  /* Estilos para el área de mensajes */
+  .chat-messages {
+    border: 1px solid #ccc; /* Borde alrededor de los mensajes */
+    padding: 10px; /* Espacio interno de los mensajes */
+    height: 300px; /* Altura máxima de los mensajes (ajusta según tus necesidades) */
+    overflow-y: auto; /* Barra de desplazamiento vertical si los mensajes son largos */
+  }
+  
+  /* Estilos para cada mensaje */
+  .message {
+    margin-bottom: 10px; /* Espacio entre mensajes */
+    padding: 10px; /* Espacio interno del mensaje */
+    border-radius: 5px; /* Bordes redondeados para el mensaje */
+  }
+  
+  /* Estilos para mensajes del usuario */
+  .user {
+    background-color: #007bff; /* Color de fondo para mensajes del usuario */
+    color: #fff; /* Color de texto para mensajes del usuario */
+  }
+  
+  /* Estilos para mensajes del bot */
+  .bot {
+    background-color: #f0f0f0; /* Color de fondo para mensajes del bot */
+    color: #333; /* Color de texto para mensajes del bot */
+  }
+
+  .center{
+    text-align: center;
+  }
